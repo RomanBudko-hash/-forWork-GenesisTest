@@ -22,8 +22,8 @@ export const useRequestsStore = defineStore('requests', () => {
 
   const request = async () => {
     try {
-      const res = await fetch('https://jsonplaceholder.typicode.com/todos')
       isLoading.value = true
+      const res = await fetch('https://jsonplaceholder.typicode.com/todos')
       if (!res.ok) {
         throw new Error('Network response was not ok ' + res.statusText)
       }
